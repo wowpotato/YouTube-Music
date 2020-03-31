@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -189,11 +189,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Cocoon Development Ltd";
 				TargetAttributes = {
 					28DA92B120D90169004B2A6D = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1130;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -241,17 +242,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YT Music/Pods-YT Music-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MediaKeyTap/MediaKeyTap.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YT Music/Pods-YT Music-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MediaKeyTap.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YT Music/Pods-YT Music-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YT Music/Pods-YT Music-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YT Music/Pods-YT Music-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3D779BB31E18C0949F71416E /* [CP] Check Pods Manifest.lock */ = {
@@ -421,10 +421,12 @@
 			baseConfigurationReference = 5AED565561146EAC97AC8F55 /* Pods-YT Music.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = "YT Music/YT Music.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = B598AEF9ZM;
+				DEVELOPMENT_TEAM = S25HXBK7F7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YT\\ Music",
@@ -441,7 +443,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/YT Music/Bridge.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -450,10 +452,12 @@
 			baseConfigurationReference = DF9D316F37D878F34D8107B0 /* Pods-YT Music.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = "YT Music/YT Music.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = B598AEF9ZM;
+				DEVELOPMENT_TEAM = S25HXBK7F7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YT\\ Music",
@@ -470,7 +474,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/YT Music/Bridge.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
